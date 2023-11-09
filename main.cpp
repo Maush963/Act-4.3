@@ -63,7 +63,7 @@ int main() {
     while (true) {
         cout << "Enter data in the format (A,B): ";
         cin >> input;
-
+        
         if (input == "****") {
             break;
         }
@@ -88,6 +88,7 @@ int main() {
     while (!str.empty()) {
         DFS_on_map(str, mp, visited_nodes);
         str = erase_visited_nodes(str, visited_nodes);
+        
         //we check if the visited nodes are more than 1, if they are, we add 1 to the tree variable, otherwise we add 1 to the acorn variable
         if (visited_nodes.size() > 1) {
             tree++;
