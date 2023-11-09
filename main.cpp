@@ -87,16 +87,7 @@ int main() {
     //we call the function to erase the visited nodes and the DFS_on_map until str is empty
     while (!str.empty()) {
         DFS_on_map(str, mp, visited_nodes);
-        //we print the visited nodes
-        cout << "Visited nodes: ";
-        for (int i = 0; i < visited_nodes.size(); i++) {
-            cout << visited_nodes[i] << " ";
-        }
-        cout << endl;
         str = erase_visited_nodes(str, visited_nodes);
-        //we print the remaining nodes
-        cout << "Remaining nodes: " << str << endl;
-
         //we check if the visited nodes are more than 1, if they are, we add 1 to the tree variable, otherwise we add 1 to the acorn variable
         if (visited_nodes.size() > 1) {
             tree++;
